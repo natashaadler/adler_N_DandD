@@ -38,13 +38,13 @@ body {
 .tl, .bl{
 	align-items: right;
 }
-.tr img{
+.tl img{
 	bottom: 0;
 }
-.tl img{
+.tr img{
 	bottom: 0; right: 0;
 }
-.bl img{
+.br img{
 	right:0; top: 0;
 }
 
