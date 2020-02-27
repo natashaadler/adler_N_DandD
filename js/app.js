@@ -14,10 +14,15 @@
 		//change the thumbnail images on the left to match the button images
 		//piece is a temperary variable & index is related to numbers
 		//make sure you index your images - makes it a lot easier to work with
+		console.log( this.dataset.puzzleindex)
 		pieces.forEach((piece, index) => {
+			let puzzlePieceBoard = document.querySelector(".puzzle-pieces");
+			puzzlePieceBoard.appendChild(puzzlePiece[index]);
 			puzzlePiece[index].src=`images/${piece + this.dataset.puzzleindex}.jpg`;
 			puzzlePiece[index].id=`${piece + this.dataset.puzzleindex}`;
 		});
+
+
 		//set a background image on the drop xone container
 		//style.backgroud to mutate the background
 
@@ -33,11 +38,15 @@
 		// capture the id of the element we're dragging
 		event.dataTransfer.setData("text/plain", this.id);
 	}
+
 	function allowDragOver(event) {
 		event.preventDefault();
 		console.log("You dragged something to me");
 	}
 	function allowDrop(event) {
+		if (this.children.length >= 1) {
+			return;
+		}
 		console.log("you dropped something on me")
 
 		let currentPiece = event.dataTransfer.getData("text/plain");
