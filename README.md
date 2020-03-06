@@ -1,4 +1,4 @@
-![PuzzlePicture](puzzleBanner.jpg "Puzzle Banner")
+![PuzzlePicture](images/puzzleBanner.jpg "Puzzle Banner")
 
 # Drag and Drop Example
 ## Natasha Adler
